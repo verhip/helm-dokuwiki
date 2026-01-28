@@ -18,9 +18,9 @@ version-set:
 	@next="$(TAG)" && \
 	current="$(VERSION)" && \
 	sed -i '' "s/$$current/$$next/g" VERSION && \
-	sed -i '' "s/tag: $$current/tag: $$next/g" charts/lms/values.yaml && \
-	sed -i '' "s/appVersion: $$current/appVersion: $$next/g" charts/lms/Chart.yaml && \
-	sed -i '' "s/version: $$current/version: $$next/g" charts/lms/Chart.yaml && \
+	# sed -i '' "s/tag: $$current/tag: $$next/g" charts/dokuwiki/values.yaml && \
+	sed -i '' "s/appVersion: $$current/appVersion: $$next/g" charts/dokuwiki/Chart.yaml && \
+	sed -i '' "s/version: $$current/version: $$next/g" charts/dokuwiki/Chart.yaml && \
 	echo "Version $$next set"
 
 release:
