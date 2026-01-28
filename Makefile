@@ -25,7 +25,7 @@ version-set:
 
 release:
 	git tag -s -m $(VERSION) $(VERSION)
-	git push origin $(VERSION)
+	git push gh $(VERSION)
 
 delete-tag:
 	git tag -d $(VERSION)
